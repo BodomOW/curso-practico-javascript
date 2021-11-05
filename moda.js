@@ -1,25 +1,21 @@
 let lista = [];
 
 function calcularModa(lista) {
-    const listaCount = {};
+  const listaCount = {};
 
-    lista.map(
-        function (elemento) {
-            if (listaCount[elemento]) {
-                listaCount[elemento] += 1;
-            } else {
-                listaCount[elemento] = 1;
-            }
-        }
-    );
-    
-    const listaArray = Object.entries(listaCount).sort(
-        function (elementoA, elementoB) {
-            return elementoA[1] - elementoB[1];       
+  lista.map(function (elemento) {
+    if (listaCount[elemento]) {
+      listaCount[elemento] += 1;
+    } else {
+      listaCount[elemento] = 1;
     }
-    )
-    
-    const moda = listaArray[listaArray.length - 1];
+  });
 
-    return moda;
+  const listaArray = Object.entries(listaCount).sort(function (elementoA, elementoB) {
+    return elementoA[1] - elementoB[1];
+  });
+
+  const moda = listaArray[listaArray.length - 1];
+
+  return moda;
 }
