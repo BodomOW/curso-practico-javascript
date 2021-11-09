@@ -1,4 +1,4 @@
- function calcularMediaAritmetica(lista) {
+function calcularMediaAritmetica(lista) {
   const sumaLista = lista.reduce(function (valorAcumulado = 0, nuevoElemento) {
     return valorAcumulado + nuevoElemento;
   });
@@ -8,18 +8,19 @@
   return promedioLista;
 }
 
+function esPar(numerito) {
+  if (numerito % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 function calcularMediana(lista) {
   lista.sort((a, b) => a - b);
 
   const mitadLista = parseInt(lista.length / 2);
 
-  function esPar(numerito) {
-    if (numerito % 2 === 0) {
-      return true;
-    } else {
-      return false;
-    }
-  }
   let mediana;
 
   if (esPar(lista.length)) {
