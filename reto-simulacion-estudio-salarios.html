@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reto: Simulación de estudio de salarios</title>
+  </head>
+  <body>
+    <header>
+      <h1>Reto: Simulación de estudio de salarios</h1>
+      <p>Ejercicio para finalizar el 4to taller del Curso Practico de JavaScript</p>
+    </header>
+
+    <section>
+      <!-- <h2>Sacar mis ingresos mensuales y mi capacidad de ahorro</h2> -->
+      <h2>Calcula tu ingreso neto y determina la recomendacion de distribucion del dinero de la regla 50 / 30 / 20</h2>
+      <label for="InputSalary"> Ingresa tu sueldo mensual: </label>
+      <input id="InputSalary" type="number" />
+      <br /><br />
+      <br />
+      <br />
+      <button type="button" onClick="calcularIngresos()">Calcular</button>
+      <p id="SueldoNetoCatorcenalP"></p>
+      <p id="RecomendacionP"></p>
+      <p id="PrediccionP"></p>
+      <p id="GastosRealesP"></p>
+      <p id="AhorroEstimadoP"></p>
+    </section>
+
+    <script src="./ingresos-personal.js"></script>
+    <script src="./reto-simulacion-estudio-salarios.js"></script>
+  </body>
+</html>
